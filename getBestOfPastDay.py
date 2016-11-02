@@ -22,7 +22,8 @@ def getFlics(links):
         x = urllib.parse.urlparse(l)
         url = x.path.split(")")[0][1:] #get rid of / and make sure there are no rando )'s
         print(url)
-        urllib.request.urlretrieve(l,url)
+        urllib.request.urlretrieve(l,"../Images/"+url)
+
 
 """
 Takes a Requests page, turns it into a Soup and creates a list of imgur jpg links
