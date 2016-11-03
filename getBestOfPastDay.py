@@ -32,7 +32,7 @@ def getFlics(links):
 
 
 """
-Creates a session and gets the page. Calls parsePage if HTTP OK response
+Creates a session and gets the page. Parses the page based on whether it is an imgur album or a reddit page.
 """
 def getPage(url,pageType):
     sesh = requests.Session()
@@ -54,13 +54,13 @@ def getPage(url,pageType):
     else:
         print("Response was "+str(page.status_code))
 
-
 """
 Sets url and calls get page
 """
 def main():
     url = "https://www.reddit.com/r/wallpaper+wallpapers/top/?sort=top&t=day"  
     getPage(url,"reddit")
-
+    url = "https://www.reddit.com/r/EarthPorn/top/?sort=top&t=day"
+    getPage(url,"reddit")
 
 main()
