@@ -8,6 +8,7 @@ No gaurantees if you use this script yada yada yada
 Pip Install List:
 pip install bs4
 pip install requests
+pip install image
 """
 import sys
 import urllib.request
