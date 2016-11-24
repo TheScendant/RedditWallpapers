@@ -12,7 +12,7 @@ import requests
 from bs4 import BeautifulSoup
 import itertools
 import code
-#from gradeImages import *
+from gradeImages import *
 #code.interact(local=locals())
 
 class PhotoAlbum():
@@ -34,7 +34,7 @@ def getFlics(links,photoAlbum):
         if '/a/' not in x.path and ( ("jpg" in x.path) or ("png" in x.path) ):
             print(x.path)
             url = x.path.split(")")[0][1:] #get rid of / and make sure there are no rando )'s
-            urllib.urlretrieve(l,"../Test/"+url)
+            urllib.request.urlretrieve(l,"../Test/"+url)
             photoAlbum.addImage(url)
         else:
             print(l + " is an album")

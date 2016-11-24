@@ -184,7 +184,7 @@ def run_inference_on_image(image):
 def main(_):
     #images = os.listdir("../Test")
     #image = "../Images/zcHm04N.jpg"    
-    #images = []
+    images = ["../Images/EbD1tAP.jpg"]
     #images.sort()
     #print (len(images))
  #   try:
