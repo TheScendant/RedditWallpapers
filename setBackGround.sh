@@ -10,7 +10,7 @@ export DBUS_SESSION_BUS_ADDRESS=$(grep -z DBUS_SESSION_BUS_ADDRESS /proc/$PID/en
 
 # Random wallpaper.
 wallpaper=`find "${dir}" -type f | shuf -n1`
-
+echo  $wallpaper > ${HOME}/Wallpapers/currBG
 # Change wallpaper.
 # http://bit.ly/HYEU9H
 gsettings set org.gnome.desktop.background picture-options "spanned"
